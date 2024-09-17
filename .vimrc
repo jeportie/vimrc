@@ -163,6 +163,43 @@ let g:ycm_global_ycm_extra_conf = '/home/jeportie/Documents/42_student/rank3/phi
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
 let g:ycm_clangd_binary_path = '~/Downloads/clangd_18.1.3/bin/clangd'
 
+"==============================================================================
+"                     VIMRC AUTO_SAVE AND UPDATE COMMANDS
+"==============================================================================
+
+augroup AutoGitCommitVimrc
+    autocmd!
+    autocmd BufWritePost ~/.vimrc call AutoGitCommitPush()
+augroup END
+
+function! AutoGitCommitPush()
+    let l:git_dir = expand("~")
+    let l:vimrc_path = expand("~/.vimrc")
+    
+    " Change to the directory where .vimrc is located
+    execute 'silent! lcd' l:git_dir
+    
+    " Stage the .vimrc file
+    call system('git add ' . shellescape(l:vimrc_path))
+
+    " Commit with a message
+    call system('git commit -m "Updated .vimrc on ' . strftime("%Y-%m-%d %H:%M:%S") . '"')
+
+    " Push to the remote
+    call system('git push origin master')
+endfunction
+
+function! GitPullVimrc()
+    let l:git_dir = expand("~")
+
+    " Change to the directory where .vimrc is located
+    execute 'silent! lcd' l:git_dir
+
+    " Pull the latest changes
+    call system('git pull origin master')
+endfunction
+
+nnoremap <leader>p :call GitPullVimrc()<CR>
 
 "==============================================================================
 "                            OTHER SETTINGS / AUTOCOMMANDS
