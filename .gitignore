@@ -2,5 +2,7 @@
 *
 
 # But do not ignore .gitignore and .vimrc
+!.bash_logout
+!.zlogout
 !.gitignore
 !.vimrc
