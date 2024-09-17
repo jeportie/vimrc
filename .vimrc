@@ -78,6 +78,7 @@ call vundle#begin('~/.vim/plugged')
 Plugin 'VundleVim/Vundle.vim'      " Let Vundle manage itself
 
 "----------------------------- PLUGIN LIST ------------------------------------
+Plugin 'GuilloteauQ/vim-hgen'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'jeportie/NorminetteRun'
 Plugin 'tyru/open-browser.vim'
