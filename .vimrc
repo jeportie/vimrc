@@ -14,12 +14,6 @@
 "                                   VIM CONFIG
 "==============================================================================
 
-if expand($VIM) != $HOME . '/local/share/vim'
-    echo "Switching to local Vim..."
-    silent !exec $HOME/local/bin/vim "$@"
-    quit
-endif
-
 "----------------------------------- GENERAL ----------------------------------
 filetype plugin indent on         " Enable file type detection and indentation
 syntax enable                     " Enable syntax highlighting
