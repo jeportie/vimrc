@@ -190,13 +190,18 @@ function! AutoGitCommitPush()
 endfunction
 
 function! GitPullVimrc()
-    let l:git_dir = expand("~")
+    let l:flag_file = expand("~/.vimrc_pulled_flag")
 
-    " Change to the directory where .vimrc is located
-    execute 'silent! lcd' l:git_dir
+    " Check if the flag file exists
+    if !filereadable(l:flag_file)
+        " Pull the latest changes if the flag doesn't exist
+        let l:git_dir = expand("~")
+        execute 'silent! lcd' l:git_dir
+        call system('git pull origin master')
 
-    " Pull the latest changes
-    call system('git pull origin master')
+        " Create the flag file to mark that the pull has happened
+        call writefile([], l:flag_file)
+    endif
 endfunction
 
 nnoremap <leader>p :call GitPullVimrc()<CR>
