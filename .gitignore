@@ -1,0 +1,6 @@
+# Ignore everything in home directory
+*
+
+# But do not ignore .gitignore and .vimrc
+!.gitignore
+!.vimrc
