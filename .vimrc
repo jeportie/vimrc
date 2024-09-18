@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/18 15:25:34 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/18 15:30:16 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -66,6 +66,12 @@ nnoremap <F4> :Files<CR>
 nnoremap <C-M> :bnext<CR>
 nnoremap <C-N> :bprev<CR>
 tnoremap <F5> <C-w>N
+
+nmap <leader>gd :YcmCompleter GoToDefinition<CR>
+nmap <leader>gr :YcmCompleter GoToReferences<CR>
+nmap <leader>gi :YcmCompleter GoToDeclaration<CR>
+nmap <leader>gt :YcmCompleter GoToType<CR>
+
 
 "==============================================================================
 "                                 PLUGIN SETTINGS
