@@ -200,7 +200,7 @@ if !exists('*SetYCMConfPath')
         return ""
     endfunction
 
-    " Function to update g:ycm_global_ycm_extra_conf and source .vimrc
+    " Function to call external bash script for updating .vimrc
     function! SetYCMConfPath()
         " Check if the function already ran in this session
         if g:ycm_conf_linked
@@ -213,28 +213,16 @@ if !exists('*SetYCMConfPath')
 
         " If we found the ycm_extra_conf.py file
         if l:ycm_conf_file != ""
-            " Check if the file exists before updating .vimrc
-            if filereadable(l:ycm_conf_file)
-                " Path to .vimrc
-                let l:vimrc_path = expand("~/.vimrc")
+            " Call the external bash script to update .vimrc
+            let l:script_path = '~/ycm_update_vimrc.sh'  " Path to bash script
+            let l:cmd = l:script_path . " '" . l:ycm_conf_file . "'"
+            call system(l:cmd)
 
-                " Backup .vimrc
-                call system('cp ' . l:vimrc_path . ' ' . l:vimrc_path . '.bak')
+            " Set the global flag to prevent running again
+            let g:ycm_conf_linked = 1
 
-                " Replace the entire line if g:ycm_global_ycm_extra_conf exists, or add it
-                call system('sed -i.bak "/g:ycm_global_ycm_extra_conf/c\\let g:ycm_global_ycm_extra_conf = ''" . l:ycm_conf_file . "''" ' . l:vimrc_path)
-
-                " Source the updated .vimrc
-                source $MYVIMRC
-
-                " Set the global flag to prevent running again
-                let g:ycm_conf_linked = 1
-
-                " Confirmation message
-                echohl WarningMsg | echo "YCM configuration file linked: " . l:ycm_conf_file | echohl None
-            else
-                echohl ErrorMsg | echo "Error: ycm_extra_conf.py file is not readable at path: " . l:ycm_conf_file | echohl None
-            endif
+            " Confirmation message
+            echohl WarningMsg | echo "YCM configuration file linked: " . l:ycm_conf_file | echohl None
         else
             " Error message if not found
             echohl ErrorMsg | echo "Error: ycm_extra_conf.py not found in the project directories" | echohl None
