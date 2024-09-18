@@ -210,29 +210,34 @@ function! UpdateYCMConf()
 
     " If we found the ycm_extra_conf.py file
     if l:ycm_conf_file != ""
-        " Path to .vimrc
-        let l:vimrc_path = expand("~/.vimrc")
+        " Check if the file exists before updating .vimrc
+        if filereadable(l:ycm_conf_file)
+            " Path to .vimrc
+            let l:vimrc_path = expand("~/.vimrc")
 
-        " Backup .vimrc
-        call system('cp ' . l:vimrc_path . ' ' . l:vimrc_path . '.bak')
+            " Backup .vimrc
+            call system('cp ' . l:vimrc_path . ' ' . l:vimrc_path . '.bak')
 
-        " Check if g:ycm_global_ycm_extra_conf already exists in .vimrc
-        if system('grep "g:ycm_global_ycm_extra_conf" ' . l:vimrc_path) != ""
-            " Update the existing line with the new path
-            call system('sed -i.bak "s|let g:ycm_global_ycm_extra_conf =.*|let g:ycm_global_ycm_extra_conf = ''" . l:ycm_conf_file . "''|" ' . l:vimrc_path)
+            " Check if g:ycm_global_ycm_extra_conf already exists in .vimrc
+            if system('grep "g:ycm_global_ycm_extra_conf" ' . l:vimrc_path) != ""
+                " Update the existing line with the new path
+                call system('sed -i.bak "s|let g:ycm_global_ycm_extra_conf =.*|let g:ycm_global_ycm_extra_conf = ''" . l:ycm_conf_file . "''|" ' . l:vimrc_path)
+            else
+                " Append the line if it doesn't exist
+                call system('echo "let g:ycm_global_ycm_extra_conf = ''' . l:ycm_conf_file . '''" >> ' . l:vimrc_path)
+            endif
+
+            " Source the updated .vimrc
+            source $MYVIMRC
+
+            " Set the global flag to prevent running again
+            let g:ycm_conf_linked = 1
+
+            " Confirmation message
+            echohl WarningMsg | echo "YCM configuration file linked: " . l:ycm_conf_file | echohl None
         else
-            " Append the line if it doesn't exist
-            call system('echo "let g:ycm_global_ycm_extra_conf = ''' . l:ycm_conf_file . '''" >> ' . l:vimrc_path)
+            echohl ErrorMsg | echo "Error: ycm_extra_conf.py file is not readable at path: " . l:ycm_conf_file | echohl None
         endif
-
-        " Source the updated .vimrc
-        source $MYVIMRC
-
-        " Set the global flag to prevent running again
-        let g:ycm_conf_linked = 1
-
-        " Confirmation message
-        echohl WarningMsg | echo "YCM configuration file linked: " . l:ycm_conf_file | echohl None
     else
         " Error message if not found
         echohl ErrorMsg | echo "Error: ycm_extra_conf.py not found in the project directories" | echohl None
@@ -247,7 +252,6 @@ augroup END
 
 " Manual shortcut to trigger the function
 command! UpdateYCM call UpdateYCMConf()
-
 
 "==============================================================================
 "                     VIMRC AUTO_SAVE AND UPDATE COMMANDS
