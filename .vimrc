@@ -222,7 +222,7 @@ if !exists('*SetYCMConfPath')
             let g:ycm_conf_linked = 1
 
             " Confirmation message
-            :silent! echo WarningMsg | echo "YCM configuration file linked: " . l:ycm_conf_file | echoh None
+            :silent! echo WarningMsg | silent! echo "YCM configuration file linked: " . l:ycm_conf_file | silent! echo None
         else
             " Error message if not found
             echohl ErrorMsg | echo "Error: ycm_extra_conf.py not found in the project directories" | echohl None
