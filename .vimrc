@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/18 19:02:40 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/18 20:48:56 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -176,9 +176,9 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 "                                 YOU COMPLETE ME
 "==============================================================================
 
-let g:ycm_global_ycm_extra_conf = "/home/jeportie/Documents/42_student/rank3/philo/ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "/home/jeromep/Documents/42_student/rank3/philo/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
-let g:ycm_clangd_binary_path = '~/Downloads/clangd_18.1.3/bin/clangd'
+#let g:ycm_clangd_binary_path = '~/Downloads/clangd_18.1.3/bin/clangd'
 
 " Global flag to prevent running the function multiple times
 let g:ycm_conf_linked = 0
