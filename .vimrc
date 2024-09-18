@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/18 15:45:30 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/18 19:02:40 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -296,7 +296,7 @@ nnoremap <leader>p :call GitPullVimrc()<CR>
 "==============================================================================
 
 let g:airline#extensions#tabline#enabled = 1
-let $FZF_DEFAULT_COMMAND = 'find . -type f -not -path "*/\.git/*" -print'
+let $FZF_DEFAULT_COMMAND = 'find /home -type f \( -not -path "*/\.git/*" \) -print'
 
 " Norminette auto-load for 42 files
 nnoremap <Leader>n :NorminetteRun<CR>
