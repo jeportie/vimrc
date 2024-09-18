@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/18 15:38:34 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/18 15:45:30 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -64,7 +64,7 @@ nnoremap <c-h> :set hlsearch!<CR>
 "-------------------------------- PLUGIN MAPS ---------------------------------
 nnoremap <F2> :NERDTreeToggle<CR>
 nmap <F3> :TagbarToggle<CR>
-nnoremap <F4> :Files<CR>
+nnoremap <F4> :Files ~/<CR>
 nnoremap <C-M> :bnext<CR>
 nnoremap <C-N> :bprev<CR>
 tnoremap <F5> <C-w>N
