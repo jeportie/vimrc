@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/18 20:49:26 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/18 20:56:49 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -178,7 +178,14 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 
 let g:ycm_global_ycm_extra_conf = "/home/jeromep/Documents/42_student/rank3/philo/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
-"let g:ycm_clangd_binary_path = '~/Downloads/clangd_18.1.3/bin/clangd'
+if system('sudo -n true') =~ 'permission denied'
+  " No sudo access, set the custom clangd path
+  let g:ycm_clangd_binary_path = '~/Downloads/clangd_18.1.3/bin/clangd'
+else
+  " Sudo access available, use default clangd path
+  let g:ycm_clangd_binary_path = 'clangd'
+endif
+
 
 " Global flag to prevent running the function multiple times
 let g:ycm_conf_linked = 0
