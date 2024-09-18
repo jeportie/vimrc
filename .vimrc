@@ -166,7 +166,7 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 "                                 YOU COMPLETE ME
 "==============================================================================
 
-let g:ycm_global_ycm_extra_conf = '/home/jeportie/Documents/42_student/rank3/philo/ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = "/home/jeportie/Documents/Minishell/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
 let g:ycm_clangd_binary_path = '~/Downloads/clangd_18.1.3/bin/clangd'
 
@@ -222,7 +222,7 @@ if !exists('*SetYCMConfPath')
             let g:ycm_conf_linked = 1
 
             " Confirmation message
-            echohl WarningMsg | echo "YCM configuration file linked: " . l:ycm_conf_file | echohl None
+            :silent! echo WarningMsg | echo "YCM configuration file linked: " . l:ycm_conf_file | echohl None
         else
             " Error message if not found
             echohl ErrorMsg | echo "Error: ycm_extra_conf.py not found in the project directories" | echohl None
