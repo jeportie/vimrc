@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/18 14:02:15 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/18 15:12:03 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -78,6 +78,7 @@ call vundle#begin('~/.vim/plugged')
 Plugin 'VundleVim/Vundle.vim'      " Let Vundle manage itself
 
 "----------------------------- PLUGIN LIST ------------------------------------
+Plugin 'vim-airline/vim-airline'
 Plugin '42Paris/42header'
 Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/gv.vim'
@@ -167,7 +168,7 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 "                                 YOU COMPLETE ME
 "==============================================================================
 
-let g:ycm_global_ycm_extra_conf = "/home/jeportie/Documents/Minishell/ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "/home/jeportie/Documents/42_student/rank3/philo/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
 let g:ycm_clangd_binary_path = '~/Downloads/clangd_18.1.3/bin/clangd'
 
