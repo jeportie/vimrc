@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/18 15:12:03 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/18 15:14:06 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -286,6 +286,8 @@ nnoremap <leader>p :call GitPullVimrc()<CR>
 "==============================================================================
 "                            OTHER SETTINGS / AUTOCOMMANDS
 "==============================================================================
+
+let g:airline#extensions#tabline#enabled = 1
 
 " Norminette auto-load for 42 files
 nnoremap <Leader>n :NorminetteRun<CR>
