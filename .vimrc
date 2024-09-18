@@ -173,85 +173,84 @@ let g:ycm_clangd_binary_path = '~/Downloads/clangd_18.1.3/bin/clangd'
 " Global flag to prevent running the function multiple times
 let g:ycm_conf_linked = 0
 
-" Function to recursively search for ycm_extra_conf.py
-function! FindYCMConf(start_dir)
-    let l:dir = a:start_dir
-    while l:dir != '/'
-        " Check if ycm_extra_conf.py exists in this directory
-        if filereadable(l:dir . "/ycm_extra_conf.py")
-            " Found the file, return the path
-            return l:dir . "/ycm_extra_conf.py"
-        endif
+" Check if the function SetYCMConfPath is already defined
+if !exists('*SetYCMConfPath')
 
-        " Check for project root indicators (like .git or Makefile)
-        if isdirectory(l:dir . "/.git") || filereadable(l:dir . "/Makefile")
-            " Stop the search if we reach a project root
-            return ""
-        endif
-
-        " Move up one directory
-        let l:dir = fnamemodify(l:dir, ":h")
-    endwhile
-
-    " If we reached the root and didn't find the file, return empty
-    return ""
-endfunction
-
-" Function to update g:ycm_global_ycm_extra_conf and source .vimrc
-function! UpdateYCMConf()
-    " Check if the function already ran in this session
-    if g:ycm_conf_linked
-        return
-    endif
-
-    " Get the current directory
-    let l:current_dir = getcwd()
-    let l:ycm_conf_file = FindYCMConf(l:current_dir)
-
-    " If we found the ycm_extra_conf.py file
-    if l:ycm_conf_file != ""
-        " Check if the file exists before updating .vimrc
-        if filereadable(l:ycm_conf_file)
-            " Path to .vimrc
-            let l:vimrc_path = expand("~/.vimrc")
-
-            " Backup .vimrc
-            call system('cp ' . l:vimrc_path . ' ' . l:vimrc_path . '.bak')
-
-            " Check if g:ycm_global_ycm_extra_conf already exists in .vimrc
-            if system('grep "g:ycm_global_ycm_extra_conf" ' . l:vimrc_path) != ""
-                " Update the existing line with the new path
-                call system('sed -i.bak "s|let g:ycm_global_ycm_extra_conf =.*|let g:ycm_global_ycm_extra_conf = ''" . l:ycm_conf_file . "''|" ' . l:vimrc_path)
-            else
-                " Append the line if it doesn't exist
-                call system('echo "let g:ycm_global_ycm_extra_conf = ''' . l:ycm_conf_file . '''" >> ' . l:vimrc_path)
+    " Function to recursively search for ycm_extra_conf.py
+    function! FindYCMConf(start_dir)
+        let l:dir = a:start_dir
+        while l:dir != '/'
+            " Check if ycm_extra_conf.py exists in this directory
+            if filereadable(l:dir . "/ycm_extra_conf.py")
+                " Found the file, return the path
+                return l:dir . "/ycm_extra_conf.py"
             endif
 
-            " Source the updated .vimrc
-            source $MYVIMRC
+            " Check for project root indicators (like .git or Makefile)
+            if isdirectory(l:dir . "/.git") || filereadable(l:dir . "/Makefile")
+                " Stop the search if we reach a project root
+                return ""
+            endif
 
-            " Set the global flag to prevent running again
-            let g:ycm_conf_linked = 1
+            " Move up one directory
+            let l:dir = fnamemodify(l:dir, ":h")
+        endwhile
 
-            " Confirmation message
-            echohl WarningMsg | echo "YCM configuration file linked: " . l:ycm_conf_file | echohl None
-        else
-            echohl ErrorMsg | echo "Error: ycm_extra_conf.py file is not readable at path: " . l:ycm_conf_file | echohl None
+        " If we reached the root and didn't find the file, return empty
+        return ""
+    endfunction
+
+    " Function to update g:ycm_global_ycm_extra_conf and source .vimrc
+    function! SetYCMConfPath()
+        " Check if the function already ran in this session
+        if g:ycm_conf_linked
+            return
         endif
-    else
-        " Error message if not found
-        echohl ErrorMsg | echo "Error: ycm_extra_conf.py not found in the project directories" | echohl None
-    endif
-endfunction
+
+        " Get the current directory
+        let l:current_dir = getcwd()
+        let l:ycm_conf_file = FindYCMConf(l:current_dir)
+
+        " If we found the ycm_extra_conf.py file
+        if l:ycm_conf_file != ""
+            " Check if the file exists before updating .vimrc
+            if filereadable(l:ycm_conf_file)
+                " Path to .vimrc
+                let l:vimrc_path = expand("~/.vimrc")
+
+                " Backup .vimrc
+                call system('cp ' . l:vimrc_path . ' ' . l:vimrc_path . '.bak')
+
+                " Replace the entire line if g:ycm_global_ycm_extra_conf exists, or add it
+                call system('sed -i.bak "/g:ycm_global_ycm_extra_conf/c\\let g:ycm_global_ycm_extra_conf = ''" . l:ycm_conf_file . "''" ' . l:vimrc_path)
+
+                " Source the updated .vimrc
+                source $MYVIMRC
+
+                " Set the global flag to prevent running again
+                let g:ycm_conf_linked = 1
+
+                " Confirmation message
+                echohl WarningMsg | echo "YCM configuration file linked: " . l:ycm_conf_file | echohl None
+            else
+                echohl ErrorMsg | echo "Error: ycm_extra_conf.py file is not readable at path: " . l:ycm_conf_file | echohl None
+            endif
+        else
+            " Error message if not found
+            echohl ErrorMsg | echo "Error: ycm_extra_conf.py not found in the project directories" | echohl None
+        endif
+    endfunction
+
+endif
 
 " Autocmd to run the function once when Vim starts (only for the first buffer)
 augroup YcmAutoUpdate
     autocmd!
-    autocmd VimEnter * if g:ycm_conf_linked == 0 | call UpdateYCMConf() | endif
+    autocmd VimEnter * if g:ycm_conf_linked == 0 | call SetYCMConfPath() | endif
 augroup END
 
 " Manual shortcut to trigger the function
-command! UpdateYCM call UpdateYCMConf()
+command! SetYCMConf call SetYCMConfPath()
 
 "==============================================================================
 "                     VIMRC AUTO_SAVE AND UPDATE COMMANDS
