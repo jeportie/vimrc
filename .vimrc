@@ -46,7 +46,7 @@ let g:mail42 = 'jeportie@student.42.fr'  " 42 email
 "==============================================================================
 
 "------------------------------- VIM SHORTCUTS -------------------------------
-nnoremap <F1> <nop>
+nnoremap <F1> <:Stdheader>
 nnoremap <leader>u :NERDTreeRefreshRoot<CR>
 nnoremap <leader>bd :bdelete<CR>
 nnoremap <leader>s :split<CR>
