@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/18 21:24:32 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/18 22:30:10 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -86,6 +86,7 @@ call vundle#begin('~/.vim/plugged')
 Plugin 'VundleVim/Vundle.vim'      " Let Vundle manage itself
 
 "----------------------------- PLUGIN LIST ------------------------------------
+Plug 'ryanoasis/vim-devicons'
 Plugin 'gisodal/vimgdb'
 Plugin 'vim-airline/vim-airline'
 Plugin '42Paris/42header'
