@@ -221,8 +221,6 @@ if !exists('*SetYCMConfPath')
             " Set the global flag to prevent running again
             let g:ycm_conf_linked = 1
 
-            " Confirmation message
-            echom ErrorMsg | echo "YCM configuration file linked: " . l:ycm_conf_file | silent! echo None
         else
             " Error message if not found
             echohl ErrorMsg | echo "Error: ycm_extra_conf.py not found in the project directories" | echohl None
