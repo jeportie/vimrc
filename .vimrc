@@ -166,7 +166,7 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 "                                 YOU COMPLETE ME
 "==============================================================================
 
-let g:ycm_global_ycm_extra_conf = "/home/jeportie/Documents/Minishell/ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "/home/jeportie/Documents/42_student/rank3/philo/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
 let g:ycm_clangd_binary_path = '~/Downloads/clangd_18.1.3/bin/clangd'
 
