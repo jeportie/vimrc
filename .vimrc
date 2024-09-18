@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/18 15:30:16 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/18 15:38:34 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -36,6 +36,8 @@ set hidden                         " Allow background buffers
 set history=200                    " Set command history limit
 set scrolloff=8                    " Keep 8 lines above/below the cursor
 set wildmenu                       " Enable command-line completion
+set tags=./tags;
+
 
 "--------------------------------- 42 SETTINGS --------------------------------
 let g:user42 = 'jeportie'          " 42 username
