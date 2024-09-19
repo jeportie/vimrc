@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/19 22:50:08 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/19 22:50:52 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -140,6 +140,25 @@ call vundle#end()                  " Finish Vundle initialization
 "         | Toggle |
 "         |Brkpoint|
 "         +--------+
+" Vimspector Keypad Mappings
+
+" Step Commands on Top Row (with 7 and 9 swapped)
+nnoremap <silent> <k7> :VimspectorStepInto<CR>
+nnoremap <silent> <k8> :VimspectorStepOver<CR>
+nnoremap <silent> <k9> :VimspectorStepOut<CR>
+
+" Practical Shortcuts on Middle Row
+nnoremap <silent> <k4> :VimspectorShowVariables<CR>
+nnoremap <silent> <k5> :VimspectorShowWatches<CR>
+nnoremap <silent> <k6> :VimspectorShowStackTrace<CR>
+
+" Control Commands on Bottom Row
+nnoremap <silent> <k1> :VimspectorContinue<CR>
+nnoremap <silent> <k2> :VimspectorRestart<CR>
+nnoremap <silent> <k3> :VimspectorStop<CR>
+
+" Toggle Breakpoint on Keypad 0
+nnoremap <silent> <k0> :VimspectorToggleBreakpoint<CR>
 
 "
 "==============================================================================
