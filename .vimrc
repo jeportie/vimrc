@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/19 22:50:52 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/19 22:56:35 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -140,25 +140,25 @@ call vundle#end()                  " Finish Vundle initialization
 "         | Toggle |
 "         |Brkpoint|
 "         +--------+
-" Vimspector Keypad Mappings
+" Vimspector Mappings using <leader> + number keys
 
-" Step Commands on Top Row (with 7 and 9 swapped)
-nnoremap <silent> <k7> :VimspectorStepInto<CR>
-nnoremap <silent> <k8> :VimspectorStepOver<CR>
-nnoremap <silent> <k9> :VimspectorStepOut<CR>
+" Control Commands on Numbers 1, 2, 3
+nnoremap <silent> <leader>1 :VimspectorContinue<CR>
+nnoremap <silent> <leader>2 :VimspectorRestart<CR>
+nnoremap <silent> <leader>3 :VimspectorStop<CR>
 
-" Practical Shortcuts on Middle Row
-nnoremap <silent> <k4> :VimspectorShowVariables<CR>
-nnoremap <silent> <k5> :VimspectorShowWatches<CR>
-nnoremap <silent> <k6> :VimspectorShowStackTrace<CR>
+" Practical Shortcuts on Numbers 4, 5, 6
+nnoremap <silent> <leader>4 :VimspectorShowVariables<CR>
+nnoremap <silent> <leader>5 :VimspectorShowWatches<CR>
+nnoremap <silent> <leader>6 :VimspectorShowStackTrace<CR>
 
-" Control Commands on Bottom Row
-nnoremap <silent> <k1> :VimspectorContinue<CR>
-nnoremap <silent> <k2> :VimspectorRestart<CR>
-nnoremap <silent> <k3> :VimspectorStop<CR>
+" Step Commands on Numbers 7, 8, 9 (with 7 and 9 swapped)
+nnoremap <silent> <leader>7 :VimspectorStepInto<CR>
+nnoremap <silent> <leader>8 :VimspectorStepOver<CR>
+nnoremap <silent> <leader>9 :VimspectorStepOut<CR>
 
-" Toggle Breakpoint on Keypad 0
-nnoremap <silent> <k0> :VimspectorToggleBreakpoint<CR>
+" Toggle Breakpoint on Number 0
+nnoremap <silent> <leader>0 :VimspectorToggleBreakpoint<CR>
 
 "
 "==============================================================================
