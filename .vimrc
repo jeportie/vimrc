@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/19 11:00:59 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/19 22:44:01 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -36,13 +36,14 @@ set hidden                         " Allow background buffers
 set history=200                    " Set command history limit
 set scrolloff=8                    " Keep 8 lines above/below the cursor
 set wildmenu                       " Enable command-line completion
-set tags=./tags;
 set encoding=UTF-8
 
 
 "--------------------------------- 42 SETTINGS --------------------------------
 let g:user42 = 'jeportie'          " 42 username
 let g:mail42 = 'jeportie@student.42.fr'  " 42 email
+
+let g:vimspector_enable_mappings = 'HUMAN'
 
 "==============================================================================
 "                                 MAPPINGS
@@ -87,6 +88,9 @@ call vundle#begin('~/.vim/plugged')
 Plugin 'VundleVim/Vundle.vim'      " Let Vundle manage itself
 
 "----------------------------- PLUGIN LIST ------------------------------------
+Plugin 'puremourning/vimspector'
+Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'CoderCookE/vim-chatgpt'
 Plugin 'dbeniamine/cheat.sh-vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'gisodal/vimgdb'
@@ -180,7 +184,7 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 "                                 YOU COMPLETE ME
 "==============================================================================
 
-let g:ycm_global_ycm_extra_conf = "/home/jeportie/Documents/42_student/rank3/philo/ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "/home/jeromep/Documents/42_student/rank3/philo/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
 if system('sudo -n true') =~ 'permission denied'
   " No sudo access, set the custom clangd path
@@ -311,3 +315,11 @@ let $FZF_DEFAULT_COMMAND = 'find /home -type f \( -not -path "*/\.git/*" \) -pri
 
 " Norminette auto-load for 42 files
 nnoremap <Leader>n :NorminetteRun<CR>
+
+let g:chat_gpt_max_tokens=4000
+let g:chat_gpt_model='gpt-4o'
+let g:chat_gpt_session_mode=0
+let g:chat_gpt_temperature = 0.1
+let g:chat_gpt_lang = 'English'
+let g:chat_gpt_split_direction = 'vertical'
+let g:split_ratio=4
