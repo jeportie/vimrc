@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/18 22:31:52 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/19 11:00:59 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -87,6 +87,7 @@ call vundle#begin('~/.vim/plugged')
 Plugin 'VundleVim/Vundle.vim'      " Let Vundle manage itself
 
 "----------------------------- PLUGIN LIST ------------------------------------
+Plugin 'dbeniamine/cheat.sh-vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'gisodal/vimgdb'
 Plugin 'vim-airline/vim-airline'
@@ -179,7 +180,7 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 "                                 YOU COMPLETE ME
 "==============================================================================
 
-let g:ycm_global_ycm_extra_conf = "/home/jeromep/Documents/42_student/rank3/philo/ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "/home/jeportie/Documents/42_student/rank3/philo/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
 if system('sudo -n true') =~ 'permission denied'
   " No sudo access, set the custom clangd path
