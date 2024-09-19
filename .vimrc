@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/19 23:19:08 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/19 23:20:14 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -357,7 +357,7 @@ nnoremap <Leader>n :NorminetteRun<CR>
 
 let g:chat_gpt_max_tokens=4000
 let g:chat_gpt_model='gpt-4o'
-let g:chat_gpt_session_mode=0
+let g:chat_gpt_session_mode=1
 let g:chat_gpt_temperature = 0.1
 let g:chat_gpt_lang = 'English'
 let g:chat_gpt_split_direction = 'vertical'
