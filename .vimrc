@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/19 23:01:07 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/19 23:15:33 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -145,7 +145,7 @@ call vundle#end()                  " Finish Vundle initialization
 " Control Commands on Numbers 1, 2, 3
 nnoremap <silent> <leader>1 :call vimspector#Continue()<CR>
 nnoremap <silent> <leader>2 :call vimspector#Restart()<CR>
-nnoremap <silent> <leader>3 :call vimspector#Stop()<CR>
+nnoremap <silent> <leader>3 :VimspectorReset<CR>
 
 " Practical Shortcuts on Numbers 4, 5, 6
 nnoremap <silent> <leader>4 :call vimspector#ShowVariables()<CR>
