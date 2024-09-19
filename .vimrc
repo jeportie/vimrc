@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/19 22:56:35 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/19 23:00:51 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -140,26 +140,25 @@ call vundle#end()                  " Finish Vundle initialization
 "         | Toggle |
 "         |Brkpoint|
 "         +--------+
-" Vimspector Mappings using <leader> + number keys
+" Vimspector Mappings using <leader> + number keys with function calls
 
 " Control Commands on Numbers 1, 2, 3
-nnoremap <silent> <leader>1 :VimspectorContinue<CR>
-nnoremap <silent> <leader>2 :VimspectorRestart<CR>
-nnoremap <silent> <leader>3 :VimspectorStop<CR>
+nnoremap <silent> <leader>1 :call vimspector#Continue()<CR>
+nnoremap <silent> <leader>2 :call vimspector#Restart()<CR>
+nnoremap <silent> <leader>3 :call vimspector#Stop()<CR>
 
 " Practical Shortcuts on Numbers 4, 5, 6
-nnoremap <silent> <leader>4 :VimspectorShowVariables<CR>
-nnoremap <silent> <leader>5 :VimspectorShowWatches<CR>
-nnoremap <silent> <leader>6 :VimspectorShowStackTrace<CR>
+nnoremap <silent> <leader>4 :call vimspector#ShowVariables()<CR>
+nnoremap <silent> <leader>5 :call vimspector#ShowWatches()<CR>
+nnoremap <silent> <leader>6 :call vimspector#ShowCallStack()<CR>
 
 " Step Commands on Numbers 7, 8, 9 (with 7 and 9 swapped)
-nnoremap <silent> <leader>7 :VimspectorStepInto<CR>
-nnoremap <silent> <leader>8 :VimspectorStepOver<CR>
-nnoremap <silent> <leader>9 :VimspectorStepOut<CR>
+nnoremap <silent> <leader>7 :call vimspector#StepInto()<CR>
+nnoremap <silent> <leader>8 :call vimspector#StepOver()<CR>
+nnoremap <silent> <leader>9 :call vimspector#StepOut()<CR>
 
 " Toggle Breakpoint on Number 0
-nnoremap <silent> <leader>0 :VimspectorToggleBreakpoint<CR>
-
+nnoremap <silent> <leader>0 :call vimspector#ToggleBreakpoint()<CR>
 "
 "==============================================================================
 "                                 PLUGIN SETTINGS
