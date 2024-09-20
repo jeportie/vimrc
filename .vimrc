@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/20 13:26:51 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/20 13:29:23 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -88,6 +88,7 @@ call vundle#begin('~/.vim/plugged')
 Plugin 'VundleVim/Vundle.vim'      " Let Vundle manage itself
 
 "----------------------------- PLUGIN LIST ------------------------------------
+Plugin 'tpope/vim-dispatch'
 Plugin 'bagrat/vim-buffet'
 Plugin 'puremourning/vimspector'
 Plugin 'ludovicchabant/vim-gutentags'
