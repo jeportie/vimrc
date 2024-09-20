@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/20 17:02:43 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/20 17:03:02 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -88,14 +88,14 @@ call vundle#begin('~/.vim/plugged')
 Plugin 'VundleVim/Vundle.vim'      " Let Vundle manage itself
 
 "----------------------------- PLUGIN LIST ------------------------------------
-"Plugin 'tpope/vim-dispatch'
-"Plugin 'bagrat/vim-buffet'
+Plugin 'tpope/vim-dispatch'
+Plugin 'bagrat/vim-buffet'
 Plugin 'ap/vim-buftabline'
 Plugin 'puremourning/vimspector'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'CoderCookE/vim-chatgpt'
 Plugin 'dbeniamine/cheat.sh-vim'
-"Plugin 'ryanoasis/vim-devicons'
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-airline/vim-airline'
 Plugin '42Paris/42header'
 Plugin 'tpope/vim-fugitive'
