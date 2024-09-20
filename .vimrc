@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/20 13:15:10 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/20 13:26:27 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -110,7 +110,6 @@ Plugin 'weirongxu/plantuml-previewer.vim'
 Plugin 'itchyny/calendar.vim'      " Calendar plugin
 Plugin 'sheerun/vim-polyglot'      " Language support
 Plugin 'dense-analysis/ale'        " Linter
-"Plugin 'ap/vim-buftabline'         " Buffer tab line
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'          " FZF fuzzy finder
 Plugin 'airblade/vim-rooter'       " Auto change working directory
@@ -364,10 +363,6 @@ let g:chat_gpt_temperature = 0.1
 let g:chat_gpt_lang = 'English'
 let g:chat_gpt_split_direction = 'vertical'
 let g:split_ratio=4
-
-" Set the testing strategy for vim-test
-let test#strategy = "neovim"  " Use Neovim's built-in terminal
-let test#neovim#term_position = "vert"  " Open the terminal vertically
 
 " Custom command to run Check tests using make
 let test#custom_runners = {'c': {'make': 'make test'}}
