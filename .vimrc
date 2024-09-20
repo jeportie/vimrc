@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/20 12:42:03 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/20 12:43:18 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -109,7 +109,7 @@ Plugin 'weirongxu/plantuml-previewer.vim'
 Plugin 'itchyny/calendar.vim'      " Calendar plugin
 Plugin 'sheerun/vim-polyglot'      " Language support
 Plugin 'dense-analysis/ale'        " Linter
-Plugin 'ap/vim-buftabline'         " Buffer tab line
+"Plugin 'ap/vim-buftabline'         " Buffer tab line
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'          " FZF fuzzy finder
 Plugin 'airblade/vim-rooter'       " Auto change working directory
