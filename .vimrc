@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/20 16:56:03 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/20 16:57:48 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -115,9 +115,6 @@ Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'          " FZF fuzzy finder
 Plugin 'airblade/vim-rooter'       " Auto change working directory
 Plugin 'jiangmiao/auto-pairs'      " Auto-closing pairs
-let g:AutoPairsShortcutToggle = '<C-P>'  " Auto-pairs toggle shortcut
-Plugin 'mattn/emmet-vim'           " Emmet for HTML/CSS
-let g:user_emmet_leader_key=','     " Emmet leader key
 Plugin 'preservim/nerdtree'        " NERDTree file explorer
 Plugin 'preservim/tagbar'          " Tagbar for code navigation
 
