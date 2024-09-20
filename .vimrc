@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/20 16:57:48 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/20 16:58:23 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -96,7 +96,6 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'CoderCookE/vim-chatgpt'
 Plugin 'dbeniamine/cheat.sh-vim'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'gisodal/vimgdb'
 Plugin 'vim-airline/vim-airline'
 Plugin '42Paris/42header'
 Plugin 'tpope/vim-fugitive'
