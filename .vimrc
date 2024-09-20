@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/20 17:20:34 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/20 17:33:42 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -89,7 +89,6 @@ call vundle#begin('~/.vim/plugged')
 Plugin 'VundleVim/Vundle.vim'      " Let Vundle manage itself
 
 "----------------------------- PLUGIN LIST ------------------------------------
-Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-dispatch'
 Plugin 'bagrat/vim-buffet'
 Plugin 'puremourning/vimspector'
