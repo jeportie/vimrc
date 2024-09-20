@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/20 17:17:26 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/20 17:20:34 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -37,13 +37,14 @@ set history=200                    " Set command history limit
 set scrolloff=8                    " Keep 8 lines above/below the cursor
 set wildmenu                       " Enable command-line completion
 set encoding=UTF-8
-
+set list lcs=tab:\|\ 
 
 "--------------------------------- 42 SETTINGS --------------------------------
 let g:user42 = 'jeportie'          " 42 username
 let g:mail42 = 'jeportie@student.42.fr'  " 42 email
 
 "let g:vimspector_enable_mappings = 'HUMAN'
+
 
 "==============================================================================
 "                                 MAPPINGS
