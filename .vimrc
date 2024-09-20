@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/20 17:13:43 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/20 17:16:35 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -104,15 +104,15 @@ Plugin 'jeportie/NorminetteRun'
 Plugin 'tyru/open-browser.vim'
 Plugin 'aklt/plantuml-syntax'
 Plugin 'weirongxu/plantuml-previewer.vim'
-Plugin 'itchyny/calendar.vim'      " Calendar plugin
-Plugin 'sheerun/vim-polyglot'      " Language support
-Plugin 'dense-analysis/ale'        " Linter
+Plugin 'itchyny/calendar.vim'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'dense-analysis/ale'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plugin 'junegunn/fzf.vim'          " FZF fuzzy finder
-Plugin 'airblade/vim-rooter'       " Auto change working directory
-Plugin 'jiangmiao/auto-pairs'      " Auto-closing pairs
-Plugin 'preservim/nerdtree'        " NERDTree file explorer
-Plugin 'preservim/tagbar'          " Tagbar for code navigation
+Plugin 'junegunn/fzf.vim'
+Plugin 'airblade/vim-rooter'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'preservim/nerdtree'
+Plugin 'preservim/tagbar'
 
 call vundle#end()                  " Finish Vundle initialization
 
