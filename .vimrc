@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/20 17:00:28 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/20 17:02:43 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -365,3 +365,6 @@ let g:split_ratio=4
 
 " Custom command to run Check tests using make
 let test#custom_runners = {'c': {'make': 'make test'}}
+
+let g:WebDevIconsUnicodeDecorateFileNodes = 0
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
