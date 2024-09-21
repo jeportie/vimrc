@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 23:11:54 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 23:44:21 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -37,7 +37,7 @@ set history=200                    " Set command history limit
 set scrolloff=8                    " Keep 8 lines above/below the cursor
 set wildmenu                       " Enable command-line completion
 set encoding=UTF-8
-set list lcs=tab:\|\ 
+set list lcs=tab:\\ 
 
 "--------------------------------- 42 SETTINGS --------------------------------
 let g:user42 = 'jeportie'          " 42 username
