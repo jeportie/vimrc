@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 12:31:33 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 12:31:55 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -44,7 +44,6 @@ let g:user42 = 'jeportie'          " 42 username
 let g:mail42 = 'jeportie@student.42.fr'  " 42 email
 
 "let g:vimspector_enable_mappings = 'HUMAN'
-test
 
 "==============================================================================
 "                                 MAPPINGS
