@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 23:07:47 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 23:09:27 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -70,7 +70,7 @@ nnoremap <F4> :Files ~/<CR>
 nnoremap <C-M> :bnext<CR>
 nnoremap <C-N> :bprev<CR>
 tnoremap <F5> <C-w>N
-tnoremap <F6> :VisuTestToggle<CR>
+nmap <F6> :VisuTestToggle<CR>
 
 nmap <leader>gd :YcmCompleter GoToDefinition<CR>
 nmap <leader>gr :YcmCompleter GoToReferences<CR>
