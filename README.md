@@ -27,6 +27,7 @@
    If the remote already exists, skip this step.
    ```bash
    git remote add origin git@github.com:jeportie/vimrc.git
+   git remote -v
    ```
 
 5. **Pull the repository**:
