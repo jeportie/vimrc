@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/23 11:45:44 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/23 11:48:38 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -108,7 +108,7 @@ Plugin 'aklt/plantuml-syntax'
 Plugin 'weirongxu/plantuml-previewer.vim'
 Plugin 'itchyny/calendar.vim'
 Plugin 'sheerun/vim-polyglot'
-"Plugin 'dense-analysis/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-rooter'
