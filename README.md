@@ -35,7 +35,7 @@
    ```bash
    git pull origin master
    ```
-   If you encounter untracked file conflicts, back them up or remove them as explained earlier.
+   If you encounter untracked file conflicts, back them up or remove them.
 
 
 7. **Stage, commit, and push changes** (when making updates):
