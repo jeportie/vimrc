@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 23:44:21 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/23 11:42:54 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -117,6 +117,9 @@ Plugin 'preservim/nerdtree'
 Plugin 'preservim/tagbar'
 
 call vundle#end()                  " Finish Vundle initialization
+
+let g:ale_c_gcc_options = '-std=c99 -I/home/jeportie/.local/include -L/home/jeportie/.local/lib -lcheck'
+
 
 "==============================================================================
 "                                  VIMSPECTOR
