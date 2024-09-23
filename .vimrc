@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/23 12:07:27 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/23 12:08:01 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -119,9 +119,7 @@ Plugin 'preservim/tagbar'
 call vundle#end()                  " Finish Vundle initialization
 
 let g:ale_linters_ignore = {'c': ['clang', 'clangtidy', 'clangcheck']}
-let g:ale_linters = {
-    \ 'c': ['gcc'],
-    \ }
+let g:ale_linters = {'c': ['gcc']}
 
 let g:ale_c_gcc_options = '-std=c99 -I/home/jeportie/.local/include -L/home/jeportie/.local/lib -lcheck'
 let g:ale_c_clang_options = '-std=c99 -I/home/jeportie/.local/include -L/home/jeportie/.local/lib -lcheck'
