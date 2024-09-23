@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/23 11:42:54 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/23 11:45:19 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -101,14 +101,14 @@ Plugin '42Paris/42header'
 Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/gv.vim'
 Plugin 'GuilloteauQ/vim-hgen'
-Plugin 'ycm-core/YouCompleteMe'
+"Plugin 'ycm-core/YouCompleteMe'
 Plugin 'jeportie/NorminetteRun'
 Plugin 'tyru/open-browser.vim'
 Plugin 'aklt/plantuml-syntax'
 Plugin 'weirongxu/plantuml-previewer.vim'
 Plugin 'itchyny/calendar.vim'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'dense-analysis/ale'
+"Plugin 'dense-analysis/ale'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'airblade/vim-rooter'
