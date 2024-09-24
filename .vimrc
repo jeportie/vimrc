@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 15:43:36 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 15:45:46 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -236,12 +236,11 @@ let g:ycm_key_invoke_completion = ''
 " Remap Tab to a no-op in insert mode
 inoremap <Tab> <Nop>
 
-" Map Shift + Tab to select the previous autocomplete suggestion
+" Map Shift + Tab to select previous autocomplete suggestion
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Nop>"
 
-" Map Ctrl + Tab to select the next autocomplete suggestion
-inoremap <expr> <C-Tab> pumvisible() ? "\<C-n>" : "\<C-Tab>"
-
+" Map Ctrl + l to select next autocomplete suggestion
+inoremap <expr> <C-l> pumvisible() ? "\<C-n>" : "\<C-l>"
 
 let g:ycm_global_ycm_extra_conf = "/home/jeportie/Documents/Minishell/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
