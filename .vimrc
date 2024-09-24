@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 15:15:38 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 15:25:55 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -91,7 +91,7 @@ Plugin 'VundleVim/Vundle.vim'      " Let Vundle manage itself
 "----------------------------- PLUGIN LIST ------------------------------------
 Plugin 'rbong/vim-flog'
 Plugin 'jeportie/VisuTest'
-Plugin 'tpope/vim-dispatch'
+"Plugin 'tpope/vim-dispatch'
 Plugin 'bagrat/vim-buffet'
 Plugin 'puremourning/vimspector'
 Plugin 'ludovicchabant/vim-gutentags'
@@ -100,8 +100,8 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-airline/vim-airline'
 Plugin '42Paris/42header'
 Plugin 'tpope/vim-fugitive'
-Plugin 'junegunn/gv.vim'
-Plugin 'GuilloteauQ/vim-hgen'
+"Plugin 'junegunn/gv.vim'
+"Plugin 'GuilloteauQ/vim-hgen'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'jeportie/NorminetteRun'
 Plugin 'tyru/open-browser.vim'
