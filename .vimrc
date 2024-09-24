@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 19:45:33 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 19:49:36 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -236,6 +236,9 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 "==============================================================================
 "                                 YOU COMPLETE ME
 "==============================================================================
+
+inoremap <Tab> <Nop>
+
 let g:ycm_popup_height = 10
 
 set completeopt=menu,menuone,noselect,noinsert
@@ -244,7 +247,6 @@ set completeopt=menu,menuone,noselect,noinsert
 let g:ycm_key_invoke_completion = ''
 
 " Remap Tab to a no-op in insert mode
-inoremap <Tab> <Nop>
 
 " Map Shift + Tab to select previous autocomplete suggestion
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Nop>"
