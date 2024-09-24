@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 20:32:34 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 20:33:05 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -245,7 +245,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <Tab> pumvisible() ? (complete_info().selected == -1 ? "\<Tab>" : "\<C-n>") : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <C-Tab> <Tab>
-
 
 let g:ycm_global_ycm_extra_conf = "/home/jeromep/Documents/minishell/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
