@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 20:16:00 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 20:16:18 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -239,20 +239,11 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 
 
 let g:ycm_popup_height = 10
-
 " Prevent automatic popup display
 let g:ycm_auto_trigger = 0
-
-" Adjust completeopt to prevent automatic completion selection
-set completeopt=menu,menuone,noinsert,noselect
-
-" Manually trigger YCM completion with Ctrl + Space
-inoremap <C-Space> <C-x><C-o>
-
-" Standard Tab navigation for insert mode and when popup is visible
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Tab>"
-
+set completeopt=menu,menuone,noinsert
+" Manually trigger YouCompleteMe completion popup with Ctrl + Space
+inoremap <C-Space> :YcmCompleter GetCompletions<CR>
 
 
 let g:ycm_global_ycm_extra_conf = "/home/jeromep/Documents/minishell/ycm_extra_conf.py"
