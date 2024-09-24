@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 20:12:21 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 20:13:35 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -242,9 +242,8 @@ let g:ycm_popup_height = 10
 " Prevent automatic popup display
 let g:ycm_auto_trigger = 0
 set completeopt=menu,menuone,noinsert
-" Manually trigger YouCompleteMe completion popup with Shift + Q
-inoremap <S-Q> :YcmCompleter GetCompletions<CR>
-
+" Manually trigger YouCompleteMe completion popup with Ctrl + Space
+inoremap <C-Space> :YcmCompleter GetCompletions<CR>
 
 
 let g:ycm_global_ycm_extra_conf = "/home/jeromep/Documents/minishell/ycm_extra_conf.py"
