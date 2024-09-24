@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 16:33:24 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 16:36:57 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -124,16 +124,16 @@ let g:ale_linters_ignore = {'c': ['clang', 'clangtidy', 'clangcheck']}
 " Use gcc as the linter for C
 let g:ale_linters = {'c': ['gcc']}
 
-" Dynamically set the paths based on environment variables or local directories
-if !isdirectory('/usr/include/check')
-    " If the user does not have access to system-wide Check, use local paths
-    let g:ale_c_gcc_options = '-std=c99 -I' . expand('$HOME') . '/.local/include -L' . expand('$HOME') . '/.local/lib -lcheck'
-    let g:ale_c_clang_options = '-std=c99 -I' . expand('$HOME') . '/.local/include -L' . expand('$HOME') . '/.local/lib -lcheck'
-else
-    " Fallback to default system paths if Check is available system-wide
-    let g:ale_c_gcc_options = '-std=c99 -lcheck'
-    let g:ale_c_clang_options = '-std=c99 -lcheck'
-endif
+" Set the local include and lib paths for gcc and clang
+let local_include = expand('$HOME') . '/.local/include'
+let local_lib = expand('$HOME') . '/.local/lib'
+
+" GCC options for ALE
+let g:ale_c_gcc_options = '-std=c99 -I' . local_include . ' -L' . local_lib . ' -lcheck'
+
+" Clang options for ALE (in case you're switching to clang later)
+let g:ale_c_clang_options = '-std=c99 -I' . local_include . ' -L' . local_lib . ' -lcheck'
+
 
 "==============================================================================
 "                                  VIMSPECTOR
