@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 15:25:55 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 15:28:51 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -233,8 +233,10 @@ let g:ycm_popup_height = 10
 " Disable the default Tab behavior for YouCompleteMe
 let g:ycm_key_invoke_completion = ''
 
-" Unmap Tab key in insert mode
-iunmap <Tab>
+" Check if the Tab key is mapped in insert mode before unmapping
+if mapcheck('<Tab>', 'i') != ''
+  iunmap <Tab>
+endif
 
 " Map Shift + Tab for selecting autocomplete suggestions
 inoremap <S-Tab> <C-n>
