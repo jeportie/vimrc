@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 20:02:28 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 20:03:23 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -240,11 +240,14 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 
 let g:ycm_popup_height = 10
 
-" Disable the default Tab behavior for YouCompleteMe
-let g:ycm_key_invoke_completion = ''
+" Prevent automatic popup display
+let g:ycm_auto_trigger = 0
+
+" Adjust completeopt to prevent automatic menu and selection
+set completeopt=menu,menuone,noselect
+
 " Manually trigger YCM completion with Shift + Q
 inoremap <expr> <S-Q> "\<C-Space>"
-
 
 
 let g:ycm_global_ycm_extra_conf = "/home/jeromep/Documents/minishell/ycm_extra_conf.py"
