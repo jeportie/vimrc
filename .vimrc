@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 15:39:52 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 15:41:19 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -236,9 +236,12 @@ let g:ycm_key_invoke_completion = ''
 " Remap Tab to a no-op in insert mode
 inoremap <Tab> <Nop>
 
-" Map Shift + Tab for selecting autocomplete suggestions
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<C-n>"
+" Map Shift + Tab to select previous autocomplete suggestion
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Nop>"
+
+" Map Ctrl + Shift + Tab to select next autocomplete suggestion
 inoremap <expr> <C-S-Tab> pumvisible() ? "\<C-n>" : "\<C-S-Tab>"
+
 
 
 let g:ycm_global_ycm_extra_conf = "/home/jeportie/Documents/Minishell/ycm_extra_conf.py"
