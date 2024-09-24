@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 16:20:25 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 16:33:24 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -119,13 +119,21 @@ Plugin 'preservim/tagbar'
 
 call vundle#end()                  " Finish Vundle initialization
 
+" Ignore clang linters for C
 let g:ale_linters_ignore = {'c': ['clang', 'clangtidy', 'clangcheck']}
+" Use gcc as the linter for C
 let g:ale_linters = {'c': ['gcc']}
 
-let g:ale_c_gcc_options = '-std=c99 -I/home/jeportie/.local/include -L/home/jeportie/.local/lib -lcheck'
-let g:ale_c_clang_options = '-std=c99 -I/home/jeportie/.local/include -L/home/jeportie/.local/lib -lcheck'
-
-
+" Dynamically set the paths based on environment variables or local directories
+if !isdirectory('/usr/include/check')
+    " If the user does not have access to system-wide Check, use local paths
+    let g:ale_c_gcc_options = '-std=c99 -I' . expand('$HOME') . '/.local/include -L' . expand('$HOME') . '/.local/lib -lcheck'
+    let g:ale_c_clang_options = '-std=c99 -I' . expand('$HOME') . '/.local/include -L' . expand('$HOME') . '/.local/lib -lcheck'
+else
+    " Fallback to default system paths if Check is available system-wide
+    let g:ale_c_gcc_options = '-std=c99 -lcheck'
+    let g:ale_c_clang_options = '-std=c99 -lcheck'
+endif
 
 "==============================================================================
 "                                  VIMSPECTOR
