@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 20:50:59 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 22:25:28 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -239,6 +239,26 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 let g:ycm_popup_height = 10
 let g:ycm_auto_trigger = 0
 set completeopt-=preview
+
+function! AddIconsToYCM()
+    let l:items = []
+    for l:item in ycm#get_completion_data()
+        " Add icons based on the type of completion (e.g., function, method, variable, etc.)
+        if l:item.kind == 'Function'
+            let l:item.abbr = '󰆧 ' . l:item.abbr
+        elseif l:item.kind == 'Variable'
+            let l:item.abbr = '󰀫 ' . l:item.abbr
+        elseif l:item.kind == 'Class'
+            let l:item.abbr = '󰅪 ' . l:item.abbr
+        endif
+        call add(l:items, l:item)
+    endfor
+    return l:items
+endfunction
+
+" Hook this into the YCM completion popup somehow
+autocmd CompleteDone * call AddIconsToYCM()
+
 
 let g:ycm_global_ycm_extra_conf = "/home/jeromep/Documents/minishell/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
