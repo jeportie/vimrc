@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 15:47:17 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 16:20:25 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -229,6 +229,7 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 "                                 YOU COMPLETE ME
 "==============================================================================
 let g:ycm_popup_height = 10
+set completeopt=menu,menuone,noselect,noinsert
 
 " Disable the default Tab behavior for YouCompleteMe
 let g:ycm_key_invoke_completion = ''
