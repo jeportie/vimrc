@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/23 12:08:01 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 10:36:45 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -89,6 +89,7 @@ call vundle#begin('~/.vim/plugged')
 Plugin 'VundleVim/Vundle.vim'      " Let Vundle manage itself
 
 "----------------------------- PLUGIN LIST ------------------------------------
+Plugin 'rbong/vim-flog'
 Plugin 'jeportie/VisuTest'
 Plugin 'tpope/vim-dispatch'
 Plugin 'bagrat/vim-buffet'
