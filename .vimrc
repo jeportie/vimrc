@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 15:30:38 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 15:37:09 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -233,11 +233,12 @@ let g:ycm_popup_height = 10
 " Disable the default Tab behavior for YouCompleteMe
 let g:ycm_key_invoke_completion = ''
 
-iunmap <Tab>
+" Remap Tab to a no-op in insert mode
+inoremap <Tab> <Nop>
 
 " Map Shift + Tab for selecting autocomplete suggestions
-inoremap <S-Tab> <C-n>
-inoremap <C-S-Tab> <C-p>
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Tab>"
+inoremap <expr> <C-S-Tab> pumvisible() ? "\<C-n>" : "\<C-S-Tab>"
 
 let g:ycm_global_ycm_extra_conf = "/home/jeportie/Documents/Minishell/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
