@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 19:51:05 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 20:02:28 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -237,22 +237,15 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 "                                 YOU COMPLETE ME
 "==============================================================================
 
-"inoremap <Tab> <Nop>
 
 let g:ycm_popup_height = 10
 
-set completeopt=menu,menuone,noselect,noinsert
-
 " Disable the default Tab behavior for YouCompleteMe
 let g:ycm_key_invoke_completion = ''
+" Manually trigger YCM completion with Shift + Q
+inoremap <expr> <S-Q> "\<C-Space>"
 
-" Remap Tab to a no-op in insert mode
 
-" Map Shift + Tab to select previous autocomplete suggestion
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Nop>"
-
-" Map Shift + Q to select next autocomplete suggestion
-inoremap <expr> <S-Q> pumvisible() ? "\<C-n>" : "\<S-Q>"
 
 let g:ycm_global_ycm_extra_conf = "/home/jeromep/Documents/minishell/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
