@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 20:11:00 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 20:11:09 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -241,7 +241,7 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 let g:ycm_popup_height = 10
 " Prevent automatic popup display
 let g:ycm_auto_trigger = 0
-set completeopt=menu,menuone,,noinsert
+set completeopt=menu,menuone,noinsert
 
 
 
