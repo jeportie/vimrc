@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/18 14:02:08 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/24 10:36:45 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/24 12:56:49 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -230,8 +230,14 @@ let g:plantuml_executable_script = "~/bin/plantuml.sh"
 "==============================================================================
 let g:ycm_popup_height = 10
 
+" Disable the default Tab behavior for YouCompleteMe
+let g:ycm_key_invoke_completion = ''
 
-let g:ycm_global_ycm_extra_conf = "/home/jeromep/Documents/42_student/rank3/philo/ycm_extra_conf.py"
+" Map Shift + Tab for selecting autocomplete suggestions
+inoremap <S-Tab> <C-n>
+inoremap <C-S-Tab> <C-p>
+
+let g:ycm_global_ycm_extra_conf = "/home/jeportie/Documents/Minishell/ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0  " Automatically load the config without asking for confirmation
 if system('sudo -n true') =~ 'permission denied'
   " No sudo access, set the custom clangd path
